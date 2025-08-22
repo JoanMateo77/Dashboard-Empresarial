@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Display } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
 
 import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 
@@ -22,10 +23,16 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>  
         <body className={`${noto.variable} ${noto.variable} antialiased`}>
+          <ThemeProvider
+            attribute="class"
+            enableSystem
+            disableTransitionOnChange
+          >
           
           {children}
+        </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

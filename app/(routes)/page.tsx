@@ -3,6 +3,7 @@ import React from "react";
 import { UserButton } from "@clerk/nextjs";
 import CardSummary from "./components/CardSummary/CardSummary";
 import { BookOpenCheck, UserRound, Waypoints } from "lucide-react";
+import { LastCustomers } from "./components/CardSummary/LastCustomers";
 
 
 export const dataCardsSummary = [
@@ -32,8 +33,8 @@ export default function Home() {
   return (
   <div>
    
-      
-      <h2 className="text-2xl mb-4">Dashboard Farid</h2>
+    
+      <h2 className="text-2xl mb-4">Dashboard </h2>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-x-20">
        { dataCardsSummary.map(({icon, total, average, title, tooltipText}) => (
         <CardSummary 
@@ -50,6 +51,10 @@ export default function Home() {
          
         
           
+      </div>
+      <div className="grid grid-cols-1 xl:grid-cols-2 md:gap-x-10 mt-12">
+        <LastCustomers/>
+        <p>Sales Distributors</p>
       </div>
     
    </div>
