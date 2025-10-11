@@ -3,7 +3,11 @@ import React from "react";
 import { UserButton } from "@clerk/nextjs";
 import CardSummary from "./components/CardSummary/CardSummary";
 import { BookOpenCheck, UserRound, Waypoints } from "lucide-react";
-import { LastCustomers } from "./components/CardSummary/LastCustomers";
+import { LastCustomers } from "./components/LastCustomers";
+import { SalesDistributor } from "./components/SalesDistributors";
+import {TotalSuscribers} from "./components/TotalSuscribers/TotalSuscribers";
+import { ListIntegrations } from "@/app/(routes)/components/ListIntegrations/ListIntegrations";
+
 
 
 export const dataCardsSummary = [
@@ -54,9 +58,15 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-2 md:gap-x-10 mt-12">
         <LastCustomers/>
-        <p>Sales Distributors</p>
+        <SalesDistributor/>
+
       </div>
-    
+      <div className="flex-col flex xl:flex md:gap-x-10 xl:flex-row gap-y-4 md:gap-y-0 mt-12 md:mb-10 justify-center ">
+        <TotalSuscribers/>
+        <ListIntegrations/>
+
+      </div>
+          
    </div>
   );
 }

@@ -1,5 +1,5 @@
 import { CustomiconProps } from "./Customicon.type"
-export default function CustomIcon(props: CustomiconProps){
+export  default function Customicon(props: CustomiconProps){
     const {icon: Icon} = props;
     return (
 
