@@ -9,30 +9,8 @@ import {TotalSuscribers} from "./components/TotalSuscribers/TotalSuscribers";
 import { ListIntegrations } from "@/app/(routes)/components/ListIntegrations/ListIntegrations";
 
 
+import { dataCardsSummary } from "./dataCardsSummary.data";
 
-export const dataCardsSummary = [
-  {
-  icon:UserRound ,
-  total : "12.450",
-  average: 15,
-  title: "Companies Created 31131",
-  tooltipText: "see all of the companies created"
-  },
-{
-  icon:Waypoints ,
-  total : "86.5%",
-  average: 80,
-  title: "total revenue",
-  tooltipText: "se all of the sumary"
- },
- {
-  icon: BookOpenCheck ,
-  total : "363,34$",
-  average:30 ,
-  title: "bounce rate",
-  tooltipText: "se all of the bounce rate"
-  },
-]
 export default function Home() {
   return (
   <div>
