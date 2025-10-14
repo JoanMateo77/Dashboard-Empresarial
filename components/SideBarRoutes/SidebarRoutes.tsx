@@ -1,6 +1,6 @@
 "use client"
 
-import { dataGeneralSidebar, dataSupportSidebar, dataToolsSidebar } from "./SideBarRoutes.data"
+import { dataGeneralSidebar, dataSupportSidebar, dataToolsSidebar } from "../../data/SideBarRoutes.data"
 
 import { Sidebaritem } from "@/components/Sidebaritem/Sidebaritem";
 

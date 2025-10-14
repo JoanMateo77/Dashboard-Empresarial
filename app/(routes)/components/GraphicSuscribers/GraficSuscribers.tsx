@@ -5,7 +5,7 @@ import{
     Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis
 
 } from "recharts"
-import { dataGraphics } from "./GraficSuscribers.data"
+import { dataGraphics } from "../../../../data/GraficSuscribers.data"
 
 
 export default function GraficSuscribers() {

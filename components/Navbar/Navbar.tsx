@@ -1,3 +1,4 @@
+'use client'
 import {Input} from "@/components/ui/input";
 
 import { Sheet, SheetContent, SheetTitle, SheetTrigger, } from "@/components/ui/sheet";
