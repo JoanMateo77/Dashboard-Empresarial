@@ -1,8 +1,5 @@
 
-import React from "react";
-import { UserButton } from "@clerk/nextjs";
 import CardSummary from "./components/CardSummary/CardSummary";
-import { BookOpenCheck, UserRound, Waypoints } from "lucide-react";
 import { LastCustomers } from "./components/LastCustomers";
 import { SalesDistributor } from "./components/SalesDistributors";
 import {TotalSuscribers} from "./components/TotalSuscribers/TotalSuscribers";

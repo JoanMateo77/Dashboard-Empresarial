@@ -3,7 +3,7 @@ import { Noto_Sans_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
 
 const noto = Noto_Sans_Display({
   variable: "--font-noto-sans-display",
