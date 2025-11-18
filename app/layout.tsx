@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
+import { siteConfig } from "@/config/site";
 
 import { ClerkProvider } from '@clerk/nextjs';
 
@@ -12,8 +13,11 @@ const noto = Noto_Sans_Display({
 
 
 export const metadata: Metadata = {
-  title: "Dashboard Companies",
-  description: "Is a dashboard for managing companies",
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

@@ -6,6 +6,7 @@ import { Sidebaritem } from "@/components/Sidebaritem/Sidebaritem";
 
 import { Separator } from "../ui/separator";
 import { Button,  } from "../ui/button";
+import { siteConfig } from "@/config/site";
 
 export  function SidebarRoutes() {
   return (
@@ -46,7 +47,7 @@ export  function SidebarRoutes() {
             </div>
             <Separator/>
             <footer className="mt-3 p-3 text-center text-sm text-slate-500">
-              <p>© 2025 Dashboard. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
             </footer>
             
           </div>
