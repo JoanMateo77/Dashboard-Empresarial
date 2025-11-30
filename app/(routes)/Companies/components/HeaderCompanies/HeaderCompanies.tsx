@@ -22,10 +22,10 @@ export default function HeaderCompanies() {
         <DialogContent className="sm:max-w-[625px]">
             <DialogHeader>
                 <DialogTitle>
-                    Create Custromer
+                    Create Customer
                 </DialogTitle>
                 <DialogDescription>
-                    Create an configure your customer
+                    Create and configure your customer
                 </DialogDescription>
             </DialogHeader>
         </DialogContent>

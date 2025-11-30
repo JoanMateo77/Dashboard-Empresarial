@@ -73,7 +73,7 @@ export const columns: ColumnDef<TableIntegrationsProps>[] = [
   },
   {
     accessorKey: "app",
-    header: "Aplication",
+    header: "Application",
     cell: ({ row }) => (
       <div className="capitalize">{row.getValue("app")}</div>
     ),

@@ -12,7 +12,7 @@ export  function CustomTooltip(props: CustomTooltipProps) {
     return(
         <Tooltip>
       <TooltipTrigger>
-        <Info strokeWidth={1} className="h5 w-5 "/>
+        <Info strokeWidth={1} className="h-5 w-5 "/>
       </TooltipTrigger>
       <TooltipContent>
     <p>{content}</p>

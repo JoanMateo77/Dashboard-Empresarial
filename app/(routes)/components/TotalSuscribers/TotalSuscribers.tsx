@@ -11,7 +11,7 @@ export  function TotalSuscribers() {
      hover:shadow transition">
         <div className="flex gap-x-2 items-center mb-4">
             <Customicon icon={Percent}/>
-            <p className="text-xl">Total Suscribers</p>
+            <p className="text-xl">Total Subscribers</p>
         </div>
         <div className="w-full h-[200px] p-5">
             <ResponsiveContainer aspect={1} maxHeight={200}>

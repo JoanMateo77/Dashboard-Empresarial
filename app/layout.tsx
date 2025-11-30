@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>  
-        <body className={`${noto.variable} ${noto.variable} antialiased`}>
+        <body className={`${noto.variable} antialiased`}>
           <ThemeProvider
             attribute="class"
             enableSystem
