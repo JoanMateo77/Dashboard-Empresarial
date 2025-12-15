@@ -1,25 +1,25 @@
-import { BookOpenCheck, UserRound, Waypoints } from "lucide-react";
+import { Activity, Building2, DollarSign } from "lucide-react";
 
 export const dataCardsSummary = [
   {
-    icon: UserRound,
-    total: "12.450",
-    average: 15,
-    title: "Companies Created 31131",
-    tooltipText: "see all of the companies created"
+    icon: Building2,
+    total: "1,257",
+    average: 24,
+    title: "Companies created",
+    tooltipText: "Total companies created this period",
   },
   {
-    icon: Waypoints,
-    total: "86.5%",
+    icon: DollarSign,
+    total: "$48,250",
     average: 80,
     title: "Total revenue",
-    tooltipText: "see all of the summary"
+    tooltipText: "Gross revenue this period",
   },
   {
-    icon: BookOpenCheck,
-    total: "363,34$",
-    average: 30,
+    icon: Activity,
+    total: "24.8%",
+    average: 9,
     title: "Bounce rate",
-    tooltipText: "see all of the bounce rate"
+    tooltipText: "Visitors who left after viewing one page",
   },
 ];

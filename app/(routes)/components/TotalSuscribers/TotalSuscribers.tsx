@@ -1,7 +1,7 @@
 "use client"
 
 import { Percent } from "lucide-react"
-import {ResponsiveContainer, PieChart, Pie,Tooltip, Legend}  from "recharts"
+import {ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend}  from "recharts"
 import Customicon from "@/components/Customicon/Customicon"
 import { dataTotalSuscribers } from "../../../../data/TotalSuscribers.data"
 
@@ -18,11 +18,16 @@ export  function TotalSuscribers() {
                 <PieChart>
                     <Pie
                     dataKey="value"
+                    nameKey="name"
                     data={dataTotalSuscribers}
                     outerRadius= {80}
                     labelLine = {false}
-                    />
-                
+                    >
+                        {dataTotalSuscribers.map((entry) => (
+                            <Cell key={entry.name} fill={entry.fill} />
+                        ))}
+                    </Pie>
+
                 <Tooltip/>
                 <Legend/>
 
