@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/dialog"
 import { useState } from "react"
 
+import { FormCreateCustomer } from "../FormCreateCustomer"
+
 export default function HeaderCompanies() {
     const [openModalCreate, setOpenModalCreate] = useState(false)
   return (
@@ -28,6 +30,7 @@ export default function HeaderCompanies() {
                     Create and configure your customer
                 </DialogDescription>
             </DialogHeader>
+            <FormCreateCustomer onCreated={() => setOpenModalCreate(false)} />
         </DialogContent>
       </Dialog>
     </div>
