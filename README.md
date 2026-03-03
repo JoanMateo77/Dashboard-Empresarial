@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard Empresarial
 
-## Getting Started
+A white-label business dashboard built with Next.js. It ships with authentication,
+a companies CRM, charts and a set of ready-to-use admin pages, so it can be used as
+a starting point for internal tools or as a portfolio project.
 
-First, run the development server:
+> The product name is configurable (white-label): set `NEXT_PUBLIC_APP_NAME` to
+> rebrand the whole app without touching the code.
+
+## Features
+
+- 🔐 **Authentication** with Clerk (sign in / sign up, user menu).
+- 📊 **Dashboard** with KPI cards, an area chart and a pie chart (Recharts).
+- 🏢 **Companies CRM** — create, list, search, sort and delete companies. Data is
+  persisted in the browser (`localStorage`), so it works with no backend.
+- 🧩 **Admin pages** — Analytics, Settings (with theme switch), Security, FAQs and Calendar.
+- 🌗 **Light / dark / system** theme with `next-themes`.
+- 📱 **Responsive** layout with a collapsible sidebar.
+- 🎨 **White-label** branding through environment variables.
+
+## Tech stack
+
+| Area        | Tech                                             |
+| ----------- | ------------------------------------------------ |
+| Framework   | [Next.js 15](https://nextjs.org) (App Router)    |
+| Language    | TypeScript, React 19                             |
+| Styling     | Tailwind CSS v4, [shadcn/ui](https://ui.shadcn.com) |
+| Auth        | [Clerk](https://clerk.com)                       |
+| Tables      | [TanStack Table](https://tanstack.com/table)     |
+| Charts      | [Recharts](https://recharts.org)                 |
+| Icons       | [lucide-react](https://lucide.dev)               |
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 18.18+ (20+ recommended)
+- A [Clerk](https://dashboard.clerk.com) application (free) for the auth keys
+
+### Installation
 
 ```bash
+npm install
+cp .env.example .env.local   # then fill in your Clerk keys
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> The Clerk keys are **required**: without them the production build fails when
+> prerendering. See `.env.example` for the full list of variables.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment variables
 
-## Learn More
+| Variable                            | Required | Description                          |
+| ----------------------------------- | -------- | ------------------------------------ |
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | ✅       | Clerk publishable key                |
+| `CLERK_SECRET_KEY`                  | ✅       | Clerk secret key                     |
+| `NEXT_PUBLIC_APP_NAME`              | —        | Product name shown in the UI         |
+| `NEXT_PUBLIC_APP_DESCRIPTION`       | —        | Short tagline used on the auth screen |
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Start the dev server (Turbopack)  |
+| `npm run build` | Production build                  |
+| `npm run start` | Run the production build          |
+| `npm run lint`  | Lint with ESLint                  |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Routes
 
-## Deploy on Vercel
+| Path         | Description                          |
+| ------------ | ------------------------------------ |
+| `/`          | Dashboard overview                   |
+| `/Companies` | Companies CRM (create / list / delete) |
+| `/analytics` | Analytics with charts                |
+| `/settings`  | Profile and appearance               |
+| `/security`  | Security settings                    |
+| `/faqs`      | Frequently asked questions           |
+| `/task`      | Calendar and upcoming events         |
+| `/sign-in`   | Clerk sign in                        |
+| `/sign-up`   | Clerk sign up                        |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/
+  (auth)/        # sign-in / sign-up (Clerk)
+  (routes)/      # dashboard layout + pages and widgets
+components/      # shared UI (sidebar, navbar, ui/, ...)
+config/          # white-label site config
+data/            # static data for charts and the sidebar
+lib/             # helpers (cn, formatPrice)
+```
+
+More detail in [`docs/`](./docs).
+
+## License
+
+Released under the MIT License. See [LICENSE](./LICENSE).
